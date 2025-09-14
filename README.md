@@ -72,7 +72,7 @@ This system uses file-based storage (`hospital_queue.txt` and `admitted_patients
   
 ![image](https://github.com/user-attachments/assets/451376be-448b-4aaa-aff5-05f1cc136953)
 
-- New Student Frame
+- New Patient Frame
   
 ![image](https://github.com/user-attachments/assets/1043333d-8142-4a8f-9ab6-4077efa61c9d)
 
