@@ -1,6 +1,6 @@
 # Hospital Queue Management System
 
-This project implements a hospital queue management system with a graphical user interface using Python and Tkinter.
+This project implements a hospital queue management system based on priority with a graphical user interface using Python and Tkinter.
 
 ## Files
 
