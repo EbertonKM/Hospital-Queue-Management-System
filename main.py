@@ -25,6 +25,7 @@ def content_frames():
 
     login_frame = Frame(main_div, bg=colors['navy'], padx=40, pady=20)
     setup_login_frame()
+
     
     menu_div = Frame(main_div, bg=colors['dark_grey'], padx=20, pady=20)
     logo_label = Label(menu_div, text="GREY SLOAN\nMEMORIAL", font=('Helvetica', 16, 'bold'), bg=colors['dark_grey'], fg=colors['white'], pady=20)
@@ -46,6 +47,9 @@ def content_frames():
 
     delete_patient_frame = Frame(main_div, bg="#2E2E2E")
     setup_delete_patient_frame()
+
+    create_menu_buttons()
+
 
 def setup_login_frame():
     global staff_id_var
@@ -71,10 +75,7 @@ def login():
     
     if staff_id == "12345":
         login_frame.pack_forget()
-        
         menu_div.pack(side="left", fill='y')
-        logo_label.pack()
-        create_menu_buttons()
         show_add_patient_page()
     else:
         messagebox.showerror("Login Failed", 
@@ -400,10 +401,7 @@ def create_menu_buttons():
         ("🚪 Logout", logout)
     ]
 
-    # Destroys all existing buttons before creating new ones
-    for widget in menu_div.winfo_children():
-        if widget is not logo_label:
-            widget.destroy()
+    logo_label.pack()
 
     for text, command in buttons:
         button_frame = Frame(menu_div, bg=colors['dark_grey'])
