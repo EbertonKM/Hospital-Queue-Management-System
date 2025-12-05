@@ -400,6 +400,11 @@ def create_menu_buttons():
         ("🚪 Logout", logout)
     ]
 
+    # Destroys all existing buttons before creating new ones
+    for widget in menu_div.winfo_children():
+        if widget is not logo_label:
+            widget.destroy()
+
     for text, command in buttons:
         button_frame = Frame(menu_div, bg=colors['dark_grey'])
         button_frame.pack(fill="x", pady=5, padx=5)
